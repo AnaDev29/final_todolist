@@ -27,21 +27,7 @@ app.use('/api/', limiter);
 
 // CORS configuration - Permitir múltiples orígenes en desarrollo
 app.use(cors({
-  origin: function(origin, callback) {
-    // Permitir peticiones sin origin (como Postman) o desde localhost
-    const allowedOrigins = [
-      'http://localhost:5173',
-      'http://localhost:5174',
-      'http://localhost:5175',
-      process.env.FRONTEND_URL
-    ].filter(Boolean);
-    
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: true, 
   credentials: true
 }));
 
