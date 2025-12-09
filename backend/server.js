@@ -14,6 +14,9 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Necesario si tu app corre detrás de un proxy (Railway, Vercel, Render, Nginx, Docker, etc)
+app.set('trust proxy', true);
+
 // Security middlewares
 app.use(helmet());
 

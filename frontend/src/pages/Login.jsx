@@ -83,17 +83,17 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         {/* Logo/Título */}
         <div className="text-center mb-8">
-          <h1 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600 mb-2">
+          <h1 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-2">
             Mi Rutina Diaria
           </h1>
-          <p className="text-gray-600 text-sm">Organiza tu día, alcanza tus metas 🎯</p>
+          <p className="text-gray-300 text-sm">Organiza tu día, alcanza tus metas 🎯</p>
         </div>
 
-        <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8 border-2 border-white">
+        <div className="bg-slate-800/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 border-2 border-slate-700">
           {/* Pestañas */}
           <div className="flex gap-3 mb-8">
             <button
@@ -101,7 +101,7 @@ export default function Login() {
               className={`flex-1 py-3 rounded-2xl font-bold text-lg transition-all ${
                 isLogin
                   ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg scale-105"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  : "bg-slate-700 text-gray-300 hover:bg-slate-600"
               }`}
             >
               🔐 Iniciar Sesión
@@ -111,7 +111,7 @@ export default function Login() {
               className={`flex-1 py-3 rounded-2xl font-bold text-lg transition-all ${
                 !isLogin
                   ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg scale-105"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  : "bg-slate-700 text-gray-300 hover:bg-slate-600"
               }`}
             >
               ✨ Registrarse
@@ -123,20 +123,20 @@ export default function Login() {
             <form onSubmit={handleLoginSubmit} className="flex flex-col gap-5">
               <div className="text-center mb-4">
                 <div className="text-4xl mb-3">👋</div>
-                <h2 className="text-3xl font-extrabold text-gray-800 mb-1">
+                <h2 className="text-3xl font-extrabold text-gray-100 mb-1">
                   ¡Bienvenido de nuevo!
                 </h2>
-                <p className="text-gray-500 text-sm">Ingresa para continuar con tus tareas</p>
+                <p className="text-gray-400 text-sm">Ingresa para continuar con tus tareas</p>
               </div>
             
               <div>
-                <label className="font-bold text-gray-700 mb-2 flex items-center gap-2" htmlFor="username">
+                <label className="font-bold text-gray-200 mb-2 flex items-center gap-2" htmlFor="username">
                   👤 Usuario
                 </label>
                 <input
                   value={alias}
                   onChange={(e) => setAlias(e.target.value)}
-                  className="w-full border-2 border-gray-200 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all"
+                  className="w-full border-2 border-slate-600 bg-slate-700 text-gray-100 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all placeholder-gray-400"
                   type="text"
                   id="username"
                   placeholder="Tu usuario"
@@ -146,13 +146,13 @@ export default function Login() {
               </div>
               
               <div>
-                <label className="font-bold text-gray-700 mb-2 flex items-center gap-2" htmlFor="password">
+                <label className="font-bold text-gray-200 mb-2 flex items-center gap-2" htmlFor="password">
                   🔒 Contraseña
                 </label>
                 <input
                   value={contraseña}
                   onChange={(e) => setContraseña(e.target.value)}
-                  className="w-full border-2 border-gray-200 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all"
+                  className="w-full border-2 border-slate-600 bg-slate-700 text-gray-100 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all placeholder-gray-400"
                   type="password"
                   id="password"
                   placeholder="Tu contraseña"
@@ -173,20 +173,20 @@ export default function Login() {
           <form onSubmit={handleRegisterSubmit} className="flex flex-col gap-4">
             <div className="text-center mb-4">
               <div className="text-4xl mb-3">🎉</div>
-              <h2 className="text-3xl font-extrabold text-gray-800 mb-1">
+              <h2 className="text-3xl font-extrabold text-gray-100 mb-1">
                 ¡Crea tu cuenta!
               </h2>
-              <p className="text-gray-500 text-sm">Únete y empieza a organizarte</p>
+              <p className="text-gray-400 text-sm">Únete y empieza a organizarte</p>
             </div>
             
             <div>
-              <label className="font-bold text-gray-700 mb-2 flex items-center gap-2" htmlFor="nombre">
-                ✍️ Nombre completo <span className="text-red-500">*</span>
+              <label className="font-bold text-gray-200 mb-2 flex items-center gap-2" htmlFor="nombre">
+                ✍️ Nombre completo <span className="text-red-400">*</span>
               </label>
               <input
                 value={nombre}
                 onChange={(e) => setNombre(e.target.value)}
-                className="w-full border-2 border-gray-200 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all"
+                className="w-full border-2 border-slate-600 bg-slate-700 text-gray-100 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all placeholder-gray-400"
                 type="text"
                 id="nombre"
                 placeholder="Tu nombre completo"
@@ -195,13 +195,13 @@ export default function Login() {
             </div>
             
             <div>
-              <label className="font-bold text-gray-700 mb-2 flex items-center gap-2" htmlFor="aliasReg">
-                👤 Usuario <span className="text-red-500">*</span>
+              <label className="font-bold text-gray-200 mb-2 flex items-center gap-2" htmlFor="aliasReg">
+                👤 Usuario <span className="text-red-400">*</span>
               </label>
               <input
                 value={aliasReg}
                 onChange={(e) => setAliasReg(e.target.value)}
-                className="w-full border-2 border-gray-200 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all"
+                className="w-full border-2 border-slate-600 bg-slate-700 text-gray-100 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all placeholder-gray-400"
                 type="text"
                 id="aliasReg"
                 placeholder="Elige un usuario"
@@ -210,13 +210,13 @@ export default function Login() {
             </div>
             
             <div>
-              <label className="font-bold text-gray-700 mb-2 flex items-center gap-2" htmlFor="emailReg">
+              <label className="font-bold text-gray-200 mb-2 flex items-center gap-2" htmlFor="emailReg">
                 📧 Email (opcional)
               </label>
               <input
                 value={emailReg}
                 onChange={(e) => setEmailReg(e.target.value)}
-                className="w-full border-2 border-gray-200 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all"
+                className="w-full border-2 border-slate-600 bg-slate-700 text-gray-100 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all placeholder-gray-400"
                 type="email"
                 id="emailReg"
                 placeholder="tu@email.com"
@@ -224,13 +224,13 @@ export default function Login() {
             </div>
             
             <div>
-              <label className="font-bold text-gray-700 mb-2 flex items-center gap-2" htmlFor="passwordReg">
-                🔒 Contraseña <span className="text-red-500">*</span>
+              <label className="font-bold text-gray-200 mb-2 flex items-center gap-2" htmlFor="passwordReg">
+                🔒 Contraseña <span className="text-red-400">*</span>
               </label>
               <input
                 value={contraseñaReg}
                 onChange={(e) => setContraseñaReg(e.target.value)}
-                className="w-full border-2 border-gray-200 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all"
+                className="w-full border-2 border-slate-600 bg-slate-700 text-gray-100 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all placeholder-gray-400"
                 type="password"
                 id="passwordReg"
                 placeholder="Mínimo 6 caracteres"
@@ -239,13 +239,13 @@ export default function Login() {
             </div>
             
             <div>
-              <label className="font-bold text-gray-700 mb-2 flex items-center gap-2" htmlFor="confirmPassword">
-                🔐 Confirmar contraseña <span className="text-red-500">*</span>
+              <label className="font-bold text-gray-200 mb-2 flex items-center gap-2" htmlFor="confirmPassword">
+                🔐 Confirmar contraseña <span className="text-red-400">*</span>
               </label>
               <input
                 value={confirmarContraseña}
                 onChange={(e) => setConfirmarContraseña(e.target.value)}
-                className="w-full border-2 border-gray-200 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all"
+                className="w-full border-2 border-slate-600 bg-slate-700 text-gray-100 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all placeholder-gray-400"
                 type="password"
                 id="confirmPassword"
                 placeholder="Repite tu contraseña"
@@ -254,7 +254,7 @@ export default function Login() {
             </div>
             
             <button
-              className="bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-xl p-4 font-bold text-lg hover:from-green-500 hover:to-emerald-600 transition-all shadow-lg hover:shadow-xl hover:scale-105 mt-2"
+              className="bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl p-4 font-bold text-lg hover:from-green-600 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 mt-2"
               type="submit"
             >
               🎉 Crear Cuenta
