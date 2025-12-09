@@ -61,6 +61,16 @@ const startServer = async () => {
     await sequelize.sync({ alter: true });
     console.log('Database synchronized.');
 
+    // Ping periódico para mantener la conexión activa (cada 5 minutos)
+    setInterval(async () => {
+      try {
+        await sequelize.authenticate();
+        console.log('Database ping successful');
+      } catch (error) {
+        console.error('Database ping failed:', error.message);
+      }
+    }, 5 * 60 * 1000); // 5 minutos
+
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
       console.log(`Environment: ${process.env.NODE_ENV}`);
