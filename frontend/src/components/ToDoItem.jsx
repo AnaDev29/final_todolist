@@ -19,7 +19,7 @@ const ToDoItem = ({ addTask }) => {
 
   return (
     <form onSubmit={handleSubmit} className="flex gap-3">
-      <div className="flex-grow relative">
+      <div className="grow relative">
         <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xl">✨</span>
         <input
           type="text"
@@ -31,7 +31,7 @@ const ToDoItem = ({ addTask }) => {
       </div>
       <button
         type="submit"
-        className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-3 rounded-xl hover:from-green-600 hover:to-emerald-700 font-bold text-lg shadow-md hover:shadow-lg transition-all hover:scale-105 flex-shrink-0"
+        className="bg-linear-to-r from-green-500 to-emerald-600 text-white px-6 py-3 rounded-xl hover:from-green-600 hover:to-emerald-700 font-bold text-lg shadow-md hover:shadow-lg transition-all hover:scale-105 shrink-0"
       >
         + Agregar
       </button>

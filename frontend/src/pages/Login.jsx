@@ -83,11 +83,11 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-linear-to-br from-slate-800 via-slate-900 to-slate-950 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         {/* Logo/Título */}
         <div className="text-center mb-8">
-          <h1 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-2">
+          <h1 className="text-5xl font-black text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500 mb-2">
             Mi Rutina Diaria
           </h1>
           <p className="text-gray-300 text-sm">Organiza tu día, alcanza tus metas 🎯</p>
@@ -100,7 +100,7 @@ export default function Login() {
               onClick={() => setIsLogin(true)}
               className={`flex-1 py-3 rounded-2xl font-bold text-lg transition-all ${
                 isLogin
-                  ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg scale-105"
+                  ? "bg-linear-to-r from-cyan-500 to-blue-600 text-white shadow-lg scale-105"
                   : "bg-slate-700 text-gray-300 hover:bg-slate-600"
               }`}
             >
@@ -110,7 +110,7 @@ export default function Login() {
               onClick={() => setIsLogin(false)}
               className={`flex-1 py-3 rounded-2xl font-bold text-lg transition-all ${
                 !isLogin
-                  ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg scale-105"
+                  ? "bg-linear-to-r from-cyan-500 to-blue-600 text-white shadow-lg scale-105"
                   : "bg-slate-700 text-gray-300 hover:bg-slate-600"
               }`}
             >
@@ -162,7 +162,7 @@ export default function Login() {
               </div>
               
               <button
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl p-4 font-bold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 mt-2"
+                className="bg-linear-to-r from-cyan-500 to-blue-600 text-white rounded-xl p-4 font-bold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 mt-2"
                 type="submit"
               >
                 ✅ Ingresar
@@ -254,7 +254,7 @@ export default function Login() {
             </div>
             
             <button
-              className="bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl p-4 font-bold text-lg hover:from-green-600 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 mt-2"
+              className="bg-linear-to-r from-green-500 to-emerald-600 text-white rounded-xl p-4 font-bold text-lg hover:from-green-600 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 mt-2"
               type="submit"
             >
               🎉 Crear Cuenta

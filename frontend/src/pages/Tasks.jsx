@@ -98,7 +98,7 @@ const Tasks = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900 p-4 py-8">
+    <div className="min-h-screen bg-linear-to-br from-slate-700 via-slate-800 to-slate-900 p-4 py-8">
       <div className="w-full max-w-4xl mx-auto">
         {/* Header */}
         <div className="bg-slate-800/95 backdrop-blur-sm rounded-3xl shadow-2xl p-6 mb-6 border border-slate-700">
@@ -113,7 +113,7 @@ const Tasks = () => {
                 />
               )}
               <div>
-                <h1 className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+                <h1 className="text-4xl font-black text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500">
                   Mi Rutina Diaria
                 </h1>
                 <p className="text-sm text-gray-300 mt-1">
@@ -150,12 +150,12 @@ const Tasks = () => {
 
         {/* Edición de tarea */}
         {editingTask && (
-          <div className="mb-6 w-full p-4 border-4 border-yellow-600 rounded-2xl bg-gradient-to-r from-yellow-900/40 to-amber-900/40 flex gap-3 items-center shadow-lg">
+          <div className="mb-6 w-full p-4 border-4 border-yellow-600 rounded-2xl bg-linear-to-r from-yellow-900/40 to-amber-900/40 flex gap-3 items-center shadow-lg">
             <span className="text-2xl">✏️</span>
             <input
               ref={editInputRef}
               defaultValue={editingTask.text}
-              className="flex-grow p-3 border-2 border-yellow-700 bg-slate-700 text-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 font-medium"
+              className="grow p-3 border-2 border-yellow-700 bg-slate-700 text-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 font-medium"
               type="text"
             />
             <button
