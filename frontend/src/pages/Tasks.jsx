@@ -98,10 +98,10 @@ const Tasks = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-100 p-4 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900 p-4 py-8">
       <div className="w-full max-w-4xl mx-auto">
         {/* Header */}
-        <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl p-6 mb-6">
+        <div className="bg-slate-800/95 backdrop-blur-sm rounded-3xl shadow-2xl p-6 mb-6 border border-slate-700">
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center gap-4">
               {user?.foto && (
@@ -113,24 +113,24 @@ const Tasks = () => {
                 />
               )}
               <div>
-                <h1 className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-600">
+                <h1 className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
                   Mi Rutina Diaria
                 </h1>
-                <p className="text-sm text-gray-600 mt-1">
-                  ¡Hola, <span className="font-bold text-cyan-600">{user?.nombre}</span>! 👋
+                <p className="text-sm text-gray-300 mt-1">
+                  ¡Hola, <span className="font-bold text-cyan-400">{user?.nombre}</span>! 👋
                 </p>
               </div>
             </div>
             <div className="flex gap-2">
               <button
                 onClick={() => navigate("/profile")}
-                className="text-blue-600 hover:text-blue-800 text-sm font-semibold px-4 py-2 rounded-xl border-2 border-blue-200 bg-blue-50 hover:bg-blue-100 transition-all"
+                className="text-blue-400 hover:text-blue-300 text-sm font-semibold px-4 py-2 rounded-xl border-2 border-blue-600 bg-blue-900/50 hover:bg-blue-800/50 transition-all"
               >
                 👤 Perfil
               </button>
               <button
                 onClick={logout}
-                className="text-red-500 hover:text-red-700 text-sm font-semibold px-4 py-2 rounded-xl border-2 border-red-200 bg-red-50 hover:bg-red-100 transition-all"
+                className="text-red-400 hover:text-red-300 text-sm font-semibold px-4 py-2 rounded-xl border-2 border-red-600 bg-red-900/50 hover:bg-red-800/50 transition-all"
               >
                 🚪 Salir
               </button>
@@ -150,22 +150,22 @@ const Tasks = () => {
 
         {/* Edición de tarea */}
         {editingTask && (
-          <div className="mb-6 w-full p-4 border-4 border-yellow-400 rounded-2xl bg-gradient-to-r from-yellow-50 to-amber-50 flex gap-3 items-center shadow-lg">
+          <div className="mb-6 w-full p-4 border-4 border-yellow-600 rounded-2xl bg-gradient-to-r from-yellow-900/40 to-amber-900/40 flex gap-3 items-center shadow-lg">
             <span className="text-2xl">✏️</span>
             <input
               ref={editInputRef}
               defaultValue={editingTask.text}
-              className="flex-grow p-3 border-2 border-yellow-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 font-medium"
+              className="flex-grow p-3 border-2 border-yellow-700 bg-slate-700 text-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 font-medium"
               type="text"
             />
             <button
-              className="bg-green-500 text-white px-5 py-2 rounded-xl hover:bg-green-600 font-bold shadow-md transition-all hover:scale-105"
+              className="bg-green-600 text-white px-5 py-2 rounded-xl hover:bg-green-700 font-bold shadow-md transition-all hover:scale-105"
               onClick={saveEditTask}
             >
               ✓ Guardar
             </button>
             <button
-              className="bg-gray-400 text-white px-5 py-2 rounded-xl hover:bg-gray-500 font-bold shadow-md transition-all hover:scale-105"
+              className="bg-gray-600 text-white px-5 py-2 rounded-xl hover:bg-gray-700 font-bold shadow-md transition-all hover:scale-105"
               onClick={cancelEditTask}
             >
               ✕ Cancelar
@@ -174,11 +174,11 @@ const Tasks = () => {
         )}
 
         {/* Lista de tareas */}
-        <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl p-6">
+        <div className="bg-slate-800/95 backdrop-blur-sm rounded-3xl shadow-2xl p-6 border border-slate-700">
           <div className="flex items-center gap-3 mb-6">
             <span className="text-3xl">📝</span>
-            <h2 className="text-2xl font-bold text-gray-800">Mis Tareas</h2>
-            <span className="ml-auto bg-cyan-100 text-cyan-700 px-4 py-1 rounded-full text-sm font-bold">
+            <h2 className="text-2xl font-bold text-gray-100">Mis Tareas</h2>
+            <span className="ml-auto bg-cyan-900/50 text-cyan-300 px-4 py-1 rounded-full text-sm font-bold border border-cyan-700">
               {filteredTasks.length} {filteredTasks.length === 1 ? 'tarea' : 'tareas'}
             </span>
           </div>
@@ -192,7 +192,7 @@ const Tasks = () => {
 
         {/* Footer con tu nombre */}
         <div className="mt-4 text-left">
-          <p className="text-xs text-gray-400">Creado por Ana Sanchez</p>
+          <p className="text-xs text-gray-500">Creado por Ana Sanchez</p>
         </div>
       </div>
     </div>

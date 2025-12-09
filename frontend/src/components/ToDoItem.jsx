@@ -26,12 +26,12 @@ const ToDoItem = ({ addTask }) => {
           placeholder="Agregar nueva tarea..."
           value={text}
           onChange={(e) => setText(e.target.value)}
-          className="w-full pl-12 pr-4 py-3 border-2 border-cyan-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent font-medium placeholder-gray-400"
+          className="w-full pl-12 pr-4 py-3 border-2 border-slate-600 bg-slate-700 text-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent font-medium placeholder-gray-400"
         />
       </div>
       <button
         type="submit"
-        className="bg-gradient-to-r from-green-400 to-emerald-500 text-white px-6 py-3 rounded-xl hover:from-green-500 hover:to-emerald-600 font-bold text-lg shadow-md hover:shadow-lg transition-all hover:scale-105 flex-shrink-0"
+        className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-3 rounded-xl hover:from-green-600 hover:to-emerald-700 font-bold text-lg shadow-md hover:shadow-lg transition-all hover:scale-105 flex-shrink-0"
       >
         + Agregar
       </button>

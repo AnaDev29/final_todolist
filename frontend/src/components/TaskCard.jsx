@@ -2,8 +2,8 @@ const TaskCard = ({ task, toggleTask, onEdit, onDelete }) => {
   return (
     <div className={`group relative flex items-center gap-4 p-4 rounded-2xl mb-3 transition-all duration-300 hover:scale-[1.02] ${
       task.completed 
-        ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200' 
-        : 'bg-gradient-to-r from-white to-blue-50 border-2 border-blue-200 shadow-md hover:shadow-lg'
+        ? 'bg-gradient-to-r from-green-900/40 to-emerald-900/40 border-2 border-green-700' 
+        : 'bg-gradient-to-r from-slate-700 to-slate-600 border-2 border-slate-500 shadow-md hover:shadow-lg'
     }`}>
       {/* Checkbox personalizado */}
       <div className="flex-shrink-0">
@@ -20,8 +20,8 @@ const TaskCard = ({ task, toggleTask, onEdit, onDelete }) => {
         <p
           className={`text-base font-medium transition-all ${
             task.completed 
-              ? "line-through text-gray-400" 
-              : "text-gray-800"
+              ? "line-through text-gray-500" 
+              : "text-gray-100"
           }`}
         >
           {task.text}

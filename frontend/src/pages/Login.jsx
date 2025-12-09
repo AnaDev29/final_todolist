@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useAuth } from "../context/AuthContext.jsx"
 import { useNavigate } from "react-router-dom"
-import { ToastContainer, toast } from "react-toastify"
+import { toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 
 export default function Login() {
@@ -261,8 +261,6 @@ export default function Login() {
             </button>
           </form>
         )}
-        
-        <ToastContainer />
         </div>
       </div>
     </div>
