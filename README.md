@@ -25,7 +25,7 @@ Todolist/
 ### 1. Clonar el Repositorio
 
 ```bash
-git clone https://github.com/SantiagoDev28/todolist.git
+git clone https://github.com/AnaDev29/todolist.git
 cd todolist
 ```
 
@@ -83,7 +83,7 @@ Iniciar servidor de desarrollo:
 npm run dev
 ```
 
-El backend estará disponible en `http://localhost:5000`
+El backend estará disponible en `https://todolist-backend-production-79bd.up.railway.app/api/health`
 
 ### 4. Configurar Frontend
 
