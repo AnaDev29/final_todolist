@@ -2,13 +2,23 @@
 
 Aplicación completa de gestión de tareas (TodoList) con autenticación, perfiles de usuario y carga de imágenes.
 
+## 📚 Documentación Importante
+
+- **[ARQUITECTURA.md](./ARQUITECTURA.md)** - Diagrama de arquitectura, componentes y flujos
+- **[API.md](./API.md)** - Documentación completa de endpoints
+
+
 ## Estructura del Proyecto
 
 ```
 Todolist/
-├── backend/          # API REST con Node.js, Express y MySQL
-├── final_react/      # Frontend con React y Vite
-└── README.md         # Este archivo
+├── backend/                    # API REST con Node.js, Express y MySQL
+├── frontend/                   # Frontend con React y Vite
+├── .github/workflows/
+│   └── ci.yml                 # Pipeline CI/CD
+├── ARQUITECTURA.md            # Documento de arquitectura
+├── API.md                     # Documentación de API
+└── README.md                  # Este archivo
 ```
 
 ## Requisitos Previos
