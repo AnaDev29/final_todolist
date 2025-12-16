@@ -6,7 +6,7 @@
 
 ---
 
-## 🔐 Autenticación
+## Autenticación
 
 | Método | Endpoint | Descripción |
 |--------|----------|-----------|
@@ -24,7 +24,7 @@ Response: { "accessToken": "...", "refreshToken": "..." }
 
 ---
 
-## ✅ Tareas
+## Tareas
 
 | Método | Endpoint | Descripción |
 |--------|----------|-----------|
@@ -61,7 +61,7 @@ Response: { "success": true }
 
 ---
 
-## 👤 Usuario
+##  Usuario
 
 | Método | Endpoint | Descripción |
 |--------|----------|-----------|
@@ -84,7 +84,7 @@ Body: { "nombre": "Juan P.", "email": "new@ex.com" }
 
 ---
 
-## 📊 Códigos HTTP
+##  Códigos HTTP
 
 | Código | Significado |
 |--------|-----------|
@@ -97,7 +97,7 @@ Body: { "nombre": "Juan P.", "email": "new@ex.com" }
 
 ---
 
-## 🧪 Ejemplo Rápido
+## Ejemplo Rápido
 
 ```bash
 # 1. Registrar

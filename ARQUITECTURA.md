@@ -1,6 +1,6 @@
 # Arquitectura - TodoList Full Stack
 
-## 🏗️ Stack Tecnológico
+##  Stack Tecnológico
 
 | Componente | Tecnología | Plataforma |
 |-----------|-----------|-----------|
@@ -9,13 +9,13 @@
 | Database | MySQL 8.0 | Railway |
 | Auth | JWT + Bcrypt | - |
 
-## 📊 Diagrama
+## Diagrama
 
 ```
 Usuario → Frontend (Vercel) → Backend (Render) → MySQL (Railway)
 ```
 
-## 📦 Estructura Principal
+## Estructura Principal
 
 **Frontend** (`src/`):
 - `components/` - Componentes React
@@ -33,7 +33,7 @@ Usuario → Frontend (Vercel) → Backend (Render) → MySQL (Railway)
 - `Users` - Usuarios registrados
 - `Tasks` - Tareas por usuario
 
-## 🔄 Flujos Principales
+## Flujos Principales
 
 **Login:**
 1. Usuario envía credenciales → Backend valida → Retorna JWT
@@ -44,14 +44,14 @@ Usuario → Frontend (Vercel) → Backend (Render) → MySQL (Railway)
 **Listar Tareas:**
 1. GET /api/tasks + JWT → Backend consulta BD → Retorna tareas del usuario
 
-## 🔒 Seguridad
+## Seguridad
 
 - JWT tokens con expiración
 - Contraseñas encriptadas (bcrypt)
 - CORS configurado
 - Validación backend
 
-## 📊 CI/CD
+##  CI/CD
 
 ```
 Push → GitHub Actions → Build frontend → Deploy a Vercel
